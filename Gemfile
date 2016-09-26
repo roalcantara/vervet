@@ -51,6 +51,7 @@ group :test do
   gem 'cucumber-rails',           '~> 1.4.0', require: false
   gem 'capybara',                 '~> 2.7.1'
   gem 'selenium-webdriver',       '~> 2.53.4'
+  gem 'capybara-screenshot',      '~> 1.0.13'
 end
 
 group :development, :test do
