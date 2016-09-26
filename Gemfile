@@ -50,6 +50,7 @@ group :test do
   gem 'coveralls',                '0.8.15', require: false
   gem 'cucumber-rails',           '~> 1.4.0', require: false
   gem 'capybara',                 '~> 2.7.1'
+  gem 'selenium-webdriver',       '~> 2.53.4'
 end
 
 group :development, :test do
