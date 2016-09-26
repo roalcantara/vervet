@@ -3,6 +3,7 @@
 A [Rails](http://rubyonrails.org/) microblog for warnings of danger of your surroundings.
 
 [![Build Status](https://travis-ci.org/roalcantara/vervet.svg?branch=master)](https://travis-ci.org/roalcantara/vervet)
+[![Coverage Status](https://coveralls.io/repos/github/roalcantara/vervet/badge.svg?branch=master)](https://coveralls.io/github/roalcantara/vervet?branch=master)
 
 ## Dependencies
 
