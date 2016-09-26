@@ -1,6 +1,6 @@
 # vervet
 
-This project is a [Rails](http://rubyonrails.org/) application used to SOMETHING.
+A [Rails](http://rubyonrails.org/) microblog for warnings of danger of your surroundings.
 
 ## Dependencies
 
