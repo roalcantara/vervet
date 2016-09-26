@@ -42,6 +42,9 @@ You can see an example here: http://showterm.io/6a0054fb8b6b53a56ef2c#slow
 
 `$ coverage=on bundle exec rake spec` to generate the coverage report then open the file `coverage/index.html` on your browser.
 
+# Running features
+1. `$ bundle exec cucumber` to run the features.
+
 ## Deploying the project to Heroku
 
 :warning: This is the **ONLY RECOMMENDED WAY** to integrate this project, please do not push directly to Heroku.

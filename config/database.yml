@@ -7,7 +7,7 @@ development:
   host: localhost
   template: template0
 
-test:
+test: &test
   adapter: postgresql
   encoding: utf8
   database: vervet_test
@@ -16,3 +16,6 @@ test:
   min_messages: WARNING
   host: localhost
   template: template0
+
+cucumber:
+  <<: *test
