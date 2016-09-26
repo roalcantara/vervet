@@ -6,7 +6,7 @@ VCR.configure do |c|
   c.configure_rspec_metadata!
 
   # Filter Rails secrets that are strings or numbers
-  secrets_to_filter = Rails.application.secrets.select do |key, value|
+  secrets_to_filter = Rails.application.secrets.select do |_, value|
     value.is_a?(String) || value.is_a?(Numeric)
   end
   secrets_to_filter.each do |key, value|
