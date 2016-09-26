@@ -2,6 +2,8 @@
 
 A [Rails](http://rubyonrails.org/) microblog for warnings of danger of your surroundings.
 
+[![Build Status](https://travis-ci.org/roalcantara/vervet.svg?branch=master)](https://travis-ci.org/roalcantara/vervet)
+
 ## Dependencies
 
 To run this project you need to have:

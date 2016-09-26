@@ -1,0 +1,28 @@
+language: ruby
+cache: bundler
+bundler_args: "--without development production --quiet"
+before_script:
+- psql -c 'create database "vervet_test";' -U postgres
+- bundle exec rake db:migrate
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+- sleep 3
+notifications:
+  email:
+  - rogerio.alcantara@gmail.com
+addons:
+  postgresql: '9.4'
+services:
+- postgresql
+branches:
+  only:
+  - master
+deploy:
+  provider: heroku
+  api_key:
+    secure: bCSG3rZYK9Pf7j5mIdY8HhNs0M5KuUBJmheMZdjqUUOujcAVpctRQD/EbdfjkZGBsjI25Q2hl2jxuNBIsAF57GAMGa6W13MNSxWe9Hkw5zVHkeZdKdPCG0/SE9crOMYNv9EAlGyKzsjpxYC9cIPL7t4KMyCgh8rvhOA9ZB10H6ag63kj6gPQRVrFKekQlHCm9UVta4N/+zWiAl5uDOhy1edTVD58aHPII3/xYgLz20GV3cs0tndv/weUUojGZDVmnSRAJpAnVv/BEkN7PXxBK569qx6D0RFlvCxm74ohke+IBoYdHM15PgAWXd/wukWrFfNUeQ17UcfPaZzVsK1ATAo9q7rPL6ad9jTsu7hkslhiVyI/CegVoazVNFkrHqIi9qRKiZj5cYagcC6viNuzwxH5mPXdg6m7Z/eJu8NgzOVLPyid5cOc0IhFeMC3tW8wVhTLnbS0EP0Zds7MKZM6p7oJ0d+6UwxBt0oyvrxZUMaEekaIYjARlGznfPwTqu5mPINWmUhNkpvRx0937nlSnRcgQd7Ikt9aiYHNCX8cHVevmg38VpBsaaGMneZ1NsOp3ruBYzQQO/wlcWok+Segg/oRyOo7AmRImVkMmERiTxHps6eURdiPDg9YED4bcA672knGGGud3If74xUITwI0UuvlBO0qrspJmn/ZfhGRpL8=
+  app: vervet
+  on: master
+  run:
+  - rake db:migrate
+  - restart
