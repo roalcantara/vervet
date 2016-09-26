@@ -39,4 +39,8 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # To avoid random errors about missing constants when running capybara
+  # ref: https://github.com/jnicklas/capybara#using-capybara-with-cucumber
+  config.allow_concurrency = false
 end
