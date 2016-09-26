@@ -7,4 +7,4 @@ INTEGRATION_TASKS = %w(
   jumpup:git:check_last_commit_change
   jumpup:heroku:finish
   jumpup:finish
-)
+).freeze
