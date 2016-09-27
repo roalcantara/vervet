@@ -40,15 +40,18 @@ group :development do
 end
 
 group :test do
-  gem 'shoulda-matchers',     '3.0.1', require: false
-  gem 'simplecov',            '0.12.0', require: false
-  gem 'email_spec',           '1.6.0'
-  gem 'capybara',             '2.5.0'
-  gem 'poltergeist',          '1.8.0'
-  gem 'vcr',                  '3.0.0'
-  gem 'webmock',              '1.22.3'
-  gem 'database_cleaner',     '1.5.1'
-  gem 'coveralls',            '0.8.15', require: false
+  gem 'shoulda-matchers',         '3.0.1', require: false
+  gem 'simplecov',                '0.12.0', require: false
+  gem 'email_spec',               '1.6.0'
+  gem 'vcr',                      '3.0.0'
+  gem 'webmock',                  '1.22.3'
+  gem 'database_cleaner',         '1.5.1'
+  gem 'coveralls',                '0.8.15', require: false
+  gem 'cucumber-rails',           '~> 1.4.0', require: false
+  gem 'capybara',                 '~> 2.7.1'
+  gem 'selenium-webdriver',       '~> 2.53.4'
+  gem 'capybara-screenshot',      '~> 1.0.13'
+  gem 'poltergeist',              '~> 1.10.0'
 end
 
 group :development, :test do
