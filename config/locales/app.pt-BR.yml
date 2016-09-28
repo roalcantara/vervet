@@ -12,4 +12,5 @@ pt-BR:
   activemodel:
     <<: *models_and_attributes
   page:
-    title: Espalhando os avisos dos seus arredores!
+    title: Espalhando os avisos dos seus arredores
+    footer: Feito com ♥ por
