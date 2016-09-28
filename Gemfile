@@ -21,6 +21,7 @@ gem 'refills',                '0.1.0'
 gem 'normalize-rails',        '3.0.3'
 gem 'rollbar',                '2.11.3'
 gem 'materialize-sass',       '~> 0.97.7'
+gem 'responders',             '~> 2.2'
 
 group :production, :staging do
   gem 'rails_12factor',       '0.0.3'
