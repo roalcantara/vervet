@@ -53,6 +53,7 @@ group :test do
   gem 'capybara-screenshot',      '~> 1.0.13'
   gem 'poltergeist',              '~> 1.10.0'
   gem 'shoulda-matchers',         '~> 3.1.1'
+  gem 'ffaker',                   '~> 2.2.0'
 end
 
 group :development, :test do
