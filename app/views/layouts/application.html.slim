@@ -11,7 +11,7 @@ html lang="pt"
     link href="/favicon.ico" rel=("shortcut icon")
 
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': true
-    = javascript_include_tag 'application', 'data-turbolinks-track': true
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = csrf_meta_tags
 
     /![if lt IE 9]
@@ -24,3 +24,4 @@ html lang="pt"
       .container
         = yield
     = render 'footer'
+    = javascript_include_tag 'application-bottom', 'data-turbolinks-track': 'reload'
