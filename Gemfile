@@ -54,6 +54,7 @@ group :test do
   gem 'poltergeist',              '~> 1.10.0'
   gem 'shoulda-matchers',         '~> 3.1.1'
   gem 'ffaker',                   '~> 2.2.0'
+  gem 'rails-controller-testing', '~> 0.1.1', require: false
 end
 
 group :development, :test do
