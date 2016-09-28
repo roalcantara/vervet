@@ -7,6 +7,7 @@ inherit_from:
 
 # Common configuration.
 AllCops:
+  TargetRubyVersion: 2.3
   # Include common Ruby source files.
   Include:
     - '**/*.gemspec'
@@ -31,7 +32,7 @@ AllCops:
     - 'vendor/**/*'
     - 'config/**/*'
     - 'script/**/*'
-    - 'db/*'
+    - 'db/**/*'
   # Default formatter will be used if no -f/--format option is given.
   DefaultFormatter: progress
   # Cop names are not displayed in offense messages by default. Change behavior
