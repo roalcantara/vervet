@@ -41,7 +41,6 @@ group :development do
 end
 
 group :test do
-  gem 'shoulda-matchers',         '3.0.1', require: false
   gem 'simplecov',                '0.12.0', require: false
   gem 'email_spec',               '1.6.0'
   gem 'vcr',                      '3.0.0'
@@ -53,6 +52,7 @@ group :test do
   gem 'selenium-webdriver',       '~> 2.53.4'
   gem 'capybara-screenshot',      '~> 1.0.13'
   gem 'poltergeist',              '~> 1.10.0'
+  gem 'shoulda-matchers',         '~> 3.1.1'
 end
 
 group :development, :test do
