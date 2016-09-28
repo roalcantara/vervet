@@ -1,0 +1,58 @@
+// scss-lint:disable VendorPrefix
+
+header {
+  .main {
+    border-bottom: solid 1px #9E9E9E;
+  }
+
+  .title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 3.1rem;
+  }
+}
+
+.brand-logo {
+  .beta {
+    margin-left: 3px;
+    color: #FF5252;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40%;
+  }
+}
+
+.section.main {
+  min-height: 424px;
+}
+
+footer {
+  .brand-logo {
+    margin-bottom: 0;
+  }
+
+  .copy-left {
+    display: inline-block;
+    margin: 0;
+    margin-right: 5px;
+    transform: scaleX(-1);
+    text-align: right;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: “FlipH”;
+  }
+
+  .social {
+    font-size: 90%;
+    font-weight: lighter;
+  }
+
+  p {
+    margin-bottom: 0;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 40px;
+  }
+}

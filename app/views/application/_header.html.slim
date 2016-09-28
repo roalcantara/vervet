@@ -1,0 +1,9 @@
+header
+  .navbar-fixed
+    nav.main.grey.darken-4
+      .nav-wrapper.container
+        = link_to root_path, class: 'brand-logo' do
+          = app_name
+          small.beta beta
+        .title
+          = yield :main_title

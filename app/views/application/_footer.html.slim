@@ -1,0 +1,24 @@
+footer.page-footer.grey.darken-4
+  .container
+    .row
+      .col.s11
+        h5.white-text.brand-logo
+          = app_name
+          small.beta beta
+        p.grey-text.text-lighten-4
+          = t 'page.title'
+      .col.s1
+        ul.social
+          li
+            a.grey-text.text-lighten-3 href="#!" Facebook
+          li
+            a.grey-text.text-lighten-3 href="#!" Twitter
+          li
+            a.grey-text.text-lighten-3 href="#!" Instagram
+  .footer-copyright.grey.darken-3
+    .container
+      span.copy-left ©
+      | #{current_year} #{app_name}, Inc.
+      small.grey-text.text-lighten-4.right
+        = t 'page.footer'
+        =< link_to '@roalcantara', 'http://github.com/roalcantara', class: 'grey-text', target: '_blank'

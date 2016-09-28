@@ -23,4 +23,18 @@ RSpec.describe ApplicationHelper do
       end
     end
   end
+
+  describe '#app_name' do
+    it 'renders the app name' do
+      expect(helper.app_name).to eq 'Vervet'
+    end
+  end
+
+  describe '#main_title' do
+    let(:title) { 'a neat title' }
+    it 'renders the main title' do
+      expect(helper).to receive(:content_for).with(:main_title, title)
+      helper.main_title(title)
+    end
+  end
 end

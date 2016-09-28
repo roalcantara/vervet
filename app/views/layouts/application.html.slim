@@ -17,6 +17,10 @@ html lang="pt"
     /![if lt IE 9]
       script src="http://html5shim.googlecode.com/svn/trunk/html5.js"
 
-  body class=body_class
+  body class="grey darken-4 #{body_class}"
+    = render 'header'
     = render 'flash_messages'
-    = yield
+    .section.main.no-pad-bot
+      .container
+        = yield
+    = render 'footer'
