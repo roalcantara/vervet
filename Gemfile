@@ -21,6 +21,13 @@ gem 'refills',                '0.1.0'
 gem 'normalize-rails',        '3.0.3'
 gem 'rollbar',                '2.11.3'
 gem 'materialize-sass',       '~> 0.97.7'
+gem 'responders',             '~> 2.2'
+gem 'omniauth',               '~> 1.3.1'
+gem 'omniauth-auth0',         '~> 1.4.1'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-auth0-lock',  '~> 10.4.0'
+end
 
 group :production, :staging do
   gem 'rails_12factor',       '0.0.3'
@@ -41,7 +48,6 @@ group :development do
 end
 
 group :test do
-  gem 'shoulda-matchers',         '3.0.1', require: false
   gem 'simplecov',                '0.12.0', require: false
   gem 'email_spec',               '1.6.0'
   gem 'vcr',                      '3.0.0'
@@ -53,6 +59,9 @@ group :test do
   gem 'selenium-webdriver',       '~> 2.53.4'
   gem 'capybara-screenshot',      '~> 1.0.13'
   gem 'poltergeist',              '~> 1.10.0'
+  gem 'shoulda-matchers',         '~> 3.1.1'
+  gem 'ffaker',                   '~> 2.2.0'
+  gem 'rails-controller-testing', '~> 0.1.1', require: false
 end
 
 group :development, :test do

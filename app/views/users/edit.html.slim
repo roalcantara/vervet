@@ -1,0 +1,12 @@
+- main_title t('pages.account')
+
+- unless @user.profile_complete?
+  .row.pad-top-30
+    .col.s6.offset-s3
+      .card-panel.teal
+        span.white-text
+          i.material-icons.left sentiment_very_satisfied
+          = t 'account.profile_info_missing'
+.row
+  .col.s6.offset-s3.grey.darken-4 class="#{@user.profile_complete? ? 'margin-top-30' : ''}"
+    = render 'form'

@@ -95,4 +95,7 @@ Rails.application.configure do
     domain:               'heroku.com',
     enable_starttls_auto: true
   }
+
+  # OmniAuth config
+  OmniAuth.config.full_host = "http://vervet.herokuapp.com"
 end

@@ -1,0 +1,13 @@
+= simple_form_for @user, wrapper: :materialize_form do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :username
+    = f.input :name
+    = f.input :email
+    = f.input :bio, wrapper: :text_area, as: :text
+
+  .form-actions
+    button.btn.light-blue.accent-3.waves-effect.waves-light type="submit"
+      = @user.profile_complete? ? t('helpers.submit.update_simple') : t('helpers.submit.finish')
+      i.material-icons.right done

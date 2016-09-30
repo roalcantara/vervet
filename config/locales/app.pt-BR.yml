@@ -1,16 +1,32 @@
 pt-BR:
   models_and_attributes: &models_and_attributes
-    # models:
-    #   event:
-    #     one: Evento
-    #     other: Eventos
-    # attributes:
-    #     event:
-    #       name: Nome
+    models:
+      user:
+        one: Usuário
+        other: Usuários
+    attributes:
+      user:
+        provider: Provedor
+        uid: Uid
+        username: Username
+        name: Nome
+        email: Email
+        bio: Bio
   activerecord:
     <<: *models_and_attributes
   activemodel:
     <<: *models_and_attributes
+  errors: &errors
+    forbidden: Ops! Não autorizado..
   page:
     title: Espalhando os avisos dos seus arredores
     footer: Feito com ♥ por
+  helpers:
+    submit:
+      update_simple: Atualizar
+      finish: Finalizar
+  pages:
+    account: Conta
+    profile: Profile
+  account:
+    profile_info_missing: Já está quase pronto. Por favor, atualize suas informações.

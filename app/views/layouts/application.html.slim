@@ -11,7 +11,7 @@ html lang="pt"
     link href="/favicon.ico" rel=("shortcut icon")
 
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': true
-    = javascript_include_tag 'application', 'data-turbolinks-track': true
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = csrf_meta_tags
 
     /![if lt IE 9]
@@ -20,7 +20,9 @@ html lang="pt"
   body class="grey darken-4 #{body_class}"
     = render 'header'
     = render 'flash_messages'
-    .section.main.no-pad-bot
+    main.no-pad-bot
       .container
         = yield
     = render 'footer'
+    = javascript_include_tag 'application-bottom', 'data-turbolinks-track': 'reload'
+    = yield :main_bottom_scripts

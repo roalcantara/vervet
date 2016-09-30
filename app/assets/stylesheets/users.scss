@@ -1,0 +1,45 @@
+.users.users-edit,
+.users.users-update {
+  color: #FFFFFF;
+
+  .edit_user {
+    padding: 20px;
+    padding-bottom: 30px;
+  }
+
+  .error_notification {
+    padding-top: 10px;
+  }
+
+  .error-text {
+    position: relative;
+    top: -20px;
+    color: #F44336;
+    font-size: 12px;
+  }
+}
+
+.card-user {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  strong {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 21px;
+    font-weight: bold;
+  }
+  small {
+    display: block;
+  }
+  span {
+    display: block;
+    font-size: 13px;
+  }
+  i {
+    position: relative;
+    left: -10px;
+  }
+  .row {
+    margin-bottom: 0;
+  }
+}
