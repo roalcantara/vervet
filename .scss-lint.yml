@@ -50,7 +50,7 @@ linters:
   IdSelector:
     enabled: true
   ImportantRule:
-    enabled: true
+    enabled: false
   ImportPath:
     enabled: true
     leading_underscore: false
