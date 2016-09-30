@@ -7,3 +7,14 @@ header
           small.beta beta
         .title
           = yield :main_title
+        ul#nav-mobile.right.hide-on-med-and-down
+          - if user_signed_in?
+            li
+              = link_to [:edit, current_user], class: 'profile' do
+                i.material-icons account_circle
+            li
+              = link_to destroy_session_path do
+                i.material-icons subdirectory_arrow_right
+          - else
+            li
+              a.auth0 Login

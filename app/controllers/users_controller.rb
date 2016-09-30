@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :authorize, only: [:edit, :update, :destroy]
 
   def index
     @users = User.all
@@ -29,5 +30,9 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:provider, :uid, :name, :username, :email, :bio, :avatar)
+  end
+
+  def authorize
+    redirect_to root_path, alert: t('errors.forbidden') unless @user.id == current_user.try(:id)
   end
 end

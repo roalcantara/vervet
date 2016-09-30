@@ -4,5 +4,7 @@
   .col.s4
     = render @user
 
-    = link_to [:edit, @user], class: 'btn light-blue accent-3 waves-effect waves-light width-100-percent'
-      i.material-icons mode_edit
+    - if user_signed_in?
+      - if current_user.id == @user.id
+        = link_to [:edit, @user], class: 'btn light-blue accent-3 waves-effect waves-light width-100-percent'
+          i.material-icons mode_edit

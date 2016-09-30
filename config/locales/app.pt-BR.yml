@@ -16,6 +16,8 @@ pt-BR:
     <<: *models_and_attributes
   activemodel:
     <<: *models_and_attributes
+  errors: &errors
+    forbidden: Ops! Não autorizado..
   page:
     title: Espalhando os avisos dos seus arredores
     footer: Feito com ♥ por

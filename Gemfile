@@ -22,6 +22,12 @@ gem 'normalize-rails',        '3.0.3'
 gem 'rollbar',                '2.11.3'
 gem 'materialize-sass',       '~> 0.97.7'
 gem 'responders',             '~> 2.2'
+gem 'omniauth',               '~> 1.3.1'
+gem 'omniauth-auth0',         '~> 1.4.1'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-auth0-lock',  '~> 10.4.0'
+end
 
 group :production, :staging do
   gem 'rails_12factor',       '0.0.3'

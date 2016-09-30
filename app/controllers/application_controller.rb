@@ -1,6 +1,8 @@
 require 'application_responder'
 
 class ApplicationController < ActionController::Base
+  include Auth0Concern
+
   self.responder = ApplicationResponder
   respond_to :html
 

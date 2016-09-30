@@ -11,3 +11,5 @@
 // about supported directives.
 //
 //= require turbolinks
+
+window.Vervet = {};
