@@ -8,4 +8,6 @@
     = f.input :bio, wrapper: :text_area, as: :text
 
   .form-actions
-    = f.submit
+    button.btn.light-blue.accent-3.waves-effect.waves-light type="submit"
+      = @user.profile_complete? ? t('helpers.submit.update_simple') : t('helpers.submit.finish')
+      i.material-icons.right done

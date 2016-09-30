@@ -21,6 +21,12 @@ pt-BR:
   page:
     title: Espalhando os avisos dos seus arredores
     footer: Feito com ♥ por
+  helpers:
+    submit:
+      update_simple: Atualizar
+      finish: Finalizar
   pages:
     account: Conta
     profile: Profile
+  account:
+    profile_info_missing: Já está quase pronto. Por favor, atualize suas informações.

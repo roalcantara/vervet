@@ -21,6 +21,12 @@ en:
   page:
     title: Spreading warnings of your surroundings
     footer: Made with ♥ by
+  helpers:
+    submit:
+      update_simple: Update
+      finish: Finish
   pages:
     account: Account
     profile: Profile
+  account:
+    profile_info_missing: It's almost done. Please, update your data.

@@ -2,6 +2,7 @@ require 'application_responder'
 
 class ApplicationController < ActionController::Base
   include Auth0Concern
+  include ProfileValidatorConcern
 
   self.responder = ApplicationResponder
   respond_to :html

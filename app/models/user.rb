@@ -14,4 +14,8 @@ class User < ApplicationRecord
   validates :email, presence: true,
                     format: { with: VALID_EMAIL_REGEX },
                     on: :update
+
+  def profile_complete?
+    provider.present? && uid.present? && name.present? && username.present? && email.present?
+  end
 end

@@ -17,4 +17,20 @@ RSpec.describe User do
       it { is_expected.to_not allow_value('wrong @email').for :email }
     end
   end
+
+  describe '#profile_complete?' do
+    context 'when user has all required properties' do
+      let(:user) { build :user }
+      it 'returns true' do
+        expect(user.profile_complete?).to be_truthy
+      end
+    end
+
+    context 'when user does not have any required properties' do
+      let(:user) { build :user, email: nil }
+      it 'returns false' do
+        expect(user.profile_complete?).to be_falsey
+      end
+    end
+  end
 end

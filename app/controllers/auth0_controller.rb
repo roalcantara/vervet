@@ -1,7 +1,14 @@
 class Auth0Controller < ApplicationController
+  skip_before_action :verify_profile, only: [:destroy, :callback, :failure]
+
   def callback
     @user = authenticate
-    redirect_to edit_user_path @user
+
+    if @user.profile_complete?
+      redirect_to root_path
+    else
+      redirect_to edit_user_path @user
+    end
   end
 
   def failure
