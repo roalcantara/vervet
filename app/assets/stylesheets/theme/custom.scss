@@ -25,6 +25,8 @@ header {
 
 main {
   min-height: 424px;
+  padding-bottom: 10px;
+  background-image: image_url('page-pattern.jpg');
 }
 
 footer {
@@ -54,5 +56,16 @@ footer {
     margin-bottom: 0;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 40px;
+  }
+}
+
+.simple_form {
+  .error_notification {
+    color: #FF5252;
+  }
+  .field_with_errors {
+    .error {
+      color: #FF5252;
+    }
   }
 }
