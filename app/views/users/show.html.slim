@@ -1,0 +1,8 @@
+- main_title t('pages.profile')
+
+.row.pad-top-30
+  .col.s4
+    = render @user
+
+    = link_to [:edit, @user], class: 'btn light-blue accent-3 waves-effect waves-light width-100-percent'
+      i.material-icons mode_edit

@@ -1,12 +1,17 @@
 pt-BR:
   models_and_attributes: &models_and_attributes
-    # models:
-    #   event:
-    #     one: Evento
-    #     other: Eventos
-    # attributes:
-    #     event:
-    #       name: Nome
+    models:
+      user:
+        one: Usuário
+        other: Usuários
+    attributes:
+      user:
+        provider: Provedor
+        uid: Uid
+        username: Username
+        name: Nome
+        email: Email
+        bio: Bio
   activerecord:
     <<: *models_and_attributes
   activemodel:
@@ -14,3 +19,6 @@ pt-BR:
   page:
     title: Espalhando os avisos dos seus arredores
     footer: Feito com ♥ por
+  pages:
+    account: Conta
+    profile: Profile

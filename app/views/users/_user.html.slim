@@ -1,0 +1,12 @@
+.card-user.card-panel.grey.lighten-5.z-depth-1
+  .row.valign-wrapper
+    .col.s2
+      i.material-icons.medium face
+    .col.s10
+      strong
+        = link_to user.name, user, class: 'black-text'
+      - if user.username
+        small
+          = link_to user.username, user, class: 'grey-text darken-5'
+      span.blue-grey-text.darken-4
+        = user.bio
