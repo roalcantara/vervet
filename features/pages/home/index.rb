@@ -10,6 +10,10 @@ module Pages
       def visit
         page.visit path
       end
+
+      def header
+        Pages::Home::Header.new
+      end
     end
   end
 end
