@@ -18,4 +18,12 @@ class User < ApplicationRecord
   def profile_complete?
     provider.present? && uid.present? && name.present? && username.present? && email.present?
   end
+
+  def self.search(criteria)
+    if criteria
+      where 'lower(name) LIKE lower(:criteria) or lower(username) LIKE lower(:criteria)', criteria: "%#{criteria}%"
+    else
+      all
+    end
+  end
 end

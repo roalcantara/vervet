@@ -33,4 +33,17 @@ RSpec.describe User do
       end
     end
   end
+
+  describe '.search' do
+    let(:users) { create_list :user, 10 }
+    let(:last) { users.last }
+
+    it 'searchers by name' do
+      expect(User.search(last.name)).to eq [last]
+    end
+
+    it 'searchers by username' do
+      expect(User.search(last.username)).to eq [last]
+    end
+  end
 end

@@ -6,3 +6,4 @@
 
 // -- Application --
 //= require auth0
+//= require search
