@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   skip_before_action :verify_profile, only: [:edit, :update]
 
   def index
-    @users = User.all
+    @users = User.search(search_params[:search])
   end
 
   def show
@@ -31,6 +31,10 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:provider, :uid, :name, :username, :email, :bio, :avatar)
+  end
+
+  def search_params
+    params.permit(:search)
   end
 
   def authorize

@@ -10,6 +10,13 @@ header
         ul#nav-mobile.right.hide-on-med-and-down
           - if user_signed_in?
             li
+              = form_tag users_path, method: :get, class: 'search-form'
+                .input-field
+                  = search_field_tag :search, params[:search], placeholder: t('search')
+                  label for="search"
+                    i.material-icons search
+                  i.material-icons.reset close
+            li
               = link_to [:edit, current_user], class: 'profile' do
                 i.material-icons account_circle
             li

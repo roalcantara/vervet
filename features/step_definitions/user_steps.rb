@@ -30,3 +30,7 @@ Then(/^I should not be authenticated$/) do
   expect(page.current_path).to match @home_page.path
   expect(@home_page.header).to_not be_logged_in
 end
+
+Given(/^there are existing users registered$/) do
+  FactoryGirl.create_list(:user, 10)
+end

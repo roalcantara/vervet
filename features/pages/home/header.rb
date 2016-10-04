@@ -19,6 +19,12 @@ module Pages
         has_selector? '.profile', visible: true
       end
 
+      def search_by(criteria)
+        search_field.set(criteria)
+        submit_search_form
+        Pages::Users::Index.new
+      end
+
       private
 
       def logout
@@ -28,6 +34,18 @@ module Pages
 
       def login
         header.find('.auth0')
+      end
+
+      def search_field
+        search_form.find('.input-field input')
+      end
+
+      def submit_search_form
+        execute_script("$('nav .search-form').submit()")
+      end
+
+      def search_form
+        header.find('nav .search-form')
       end
 
       def header
