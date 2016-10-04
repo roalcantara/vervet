@@ -62,6 +62,7 @@ group :test do
   gem 'shoulda-matchers',         '~> 3.1.1'
   gem 'ffaker',                   '~> 2.2.0'
   gem 'rails-controller-testing', '~> 0.1.1', require: false
+  gem 'rack_session_access',      '~> 0.1.1'
 end
 
 group :development, :test do

@@ -231,6 +231,9 @@ GEM
       rack (>= 1.0.0, < 3)
     rack-test (0.6.3)
       rack (>= 1.0)
+    rack_session_access (0.1.1)
+      builder (>= 2.0.0)
+      rack (>= 1.0.0)
     rails (5.0.0)
       actioncable (= 5.0.0)
       actionmailer (= 5.0.0)
@@ -403,6 +406,7 @@ DEPENDENCIES
   pry-rails (= 0.3.4)
   puma (= 2.15.3)
   rack-canonical-host (= 0.2.2)
+  rack_session_access (~> 0.1.1)
   rails (= 5.0.0)
   rails-assets-auth0-lock (~> 10.4.0)!
   rails-controller-testing (~> 0.1.1)

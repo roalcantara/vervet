@@ -43,4 +43,7 @@ Rails.application.configure do
   # To avoid random errors about missing constants when running capybara
   # ref: https://github.com/jnicklas/capybara#using-capybara-with-cucumber
   config.allow_concurrency = false
+
+  # Access to rack session
+  config.middleware.use RackSessionAccess::Middleware
 end

@@ -3,6 +3,7 @@ require 'capybara/cucumber'
 require 'selenium-webdriver'
 require 'capybara-screenshot/cucumber'
 require 'capybara/poltergeist'
+require 'rack_session_access/capybara'
 
 # Capybara defaults to CSS3 selectors rather than XPath.
 # If you'd prefer to use XPath, just uncomment this line and adjust any
@@ -30,10 +31,11 @@ Capybara.default_driver = :poltergeist
 Capybara.register_driver :poltergeist do |app|
   options = {
     js_errors: false,
-    timeout: 120,
+    timeout: 10,
     debug: false,
     phantomjs_options: ['--load-images=no', '--disk-cache=false'],
-    inspector: true
+    inspector: true,
+    url_blacklist: ['cdn.auth0.com', 'fonts.googleapis.com']
   }
   Capybara::Poltergeist::Driver.new(app, options)
 end
