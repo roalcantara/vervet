@@ -49,6 +49,3 @@ end
 # The :transaction strategy is faster, but might give you threading problems.
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :truncation
-
-# Necessary to allow that the data created in the spec to be visible in the app-under-test
-Cucumber::Rails::World.use_transactional_tests = false
