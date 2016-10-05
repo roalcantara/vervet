@@ -37,4 +37,26 @@ RSpec.describe ApplicationHelper do
       helper.main_title(title)
     end
   end
+
+  describe '#errors?' do
+    let(:css_class) { 'some-class' }
+
+    context 'when the given model has errors for the given field' do
+      let(:user) { build :user, name: nil }
+      before { user.valid? }
+
+      it 'returns the given class' do
+        expect(helper.errors?(user, :name, css_class)).to eq css_class
+      end
+    end
+
+    context 'when the given model has no errors for the given field' do
+      let(:user) { build :user }
+      before { user.valid? }
+
+      it 'does not return anything' do
+        expect(helper.errors?(user, :name, css_class)).to be_nil
+      end
+    end
+  end
 end

@@ -10,4 +10,8 @@ module ApplicationHelper
   def main_title(title)
     content_for(:main_title, title)
   end
+
+  def errors?(model, field, css_class)
+    css_class if model.errors[field].any?
+  end
 end
