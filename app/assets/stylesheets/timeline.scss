@@ -1,0 +1,43 @@
+.timeline {
+  .collection-item.avatar {
+    .circle {
+      font-size: 42px !important;
+    }
+    .title {
+      margin-right: 5px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 13px !important;
+      font-weight: bold;
+    }
+    p {
+      position: relative;
+      left: 15px;
+      width: 95%;
+      font-family: 'Roboto', sans-serif;
+      font-size: 12px !important;
+    }
+    .kind {
+      position: absolute;
+      top: 35px;
+      left: 70px;
+    }
+    .where {
+      position: relative;
+      top: 3px;
+      left: -2px;
+    }
+    .at {
+      position: relative;
+      font-size: 11px;
+    }
+    .tertiary-content {
+      position: absolute;
+      top: 50px;
+      right: 16px;
+    }
+    .materialize-textarea {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+}

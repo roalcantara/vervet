@@ -4,6 +4,9 @@ pt-BR:
       user:
         one: Usuário
         other: Usuários
+      post:
+        one: Post
+        other: Posts
     attributes:
       user:
         provider: Provedor
@@ -12,6 +15,17 @@ pt-BR:
         name: Nome
         email: Email
         bio: Bio
+      post:
+        kind: Tipo
+        description: Descrição
+        description_question: O que está acontecendo?
+        location: Local
+        location_question: Onde?
+        author: Autor
+        kinds:
+          accident: Acidente
+          fire: Incêndio
+          robbery: Roubo
   activerecord:
     <<: *models_and_attributes
   activemodel:
@@ -21,13 +35,17 @@ pt-BR:
   page:
     title: Espalhando os avisos dos seus arredores
     footer: Feito com ♥ por
+  alerts:
+    are_you_sure: Tem certeza?
   helpers:
     submit:
       update_simple: Atualizar
       finish: Finalizar
+      send: Enviar
   pages:
     account: Conta
     profile: Profile
+    timeline: Timeline
   account:
     profile_info_missing: Já está quase pronto. Por favor, atualize suas informações.
   search: Busca

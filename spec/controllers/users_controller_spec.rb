@@ -4,6 +4,7 @@ RSpec.describe UsersController do
   let(:valid_attributes) { attributes_for :user }
   let(:invalid_attributes) { attributes_for(:user, name: nil) }
   let(:valid_session) { {} }
+  before(:all) { User.delete_all }
 
   describe 'GET #index' do
     it 'assigns all users as @users' do

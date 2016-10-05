@@ -7,3 +7,5 @@
 // -- Application --
 //= require auth0
 //= require search
+//= require posts
+//= require timeline

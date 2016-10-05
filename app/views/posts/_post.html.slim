@@ -1,0 +1,20 @@
+li.collection-item.avatar id="post_#{post.id}" data-id="#{post.id}"
+  i.material-icons.circle.orange face
+  span.title
+    = link_to post.author_name, post.author, class: 'black-text'
+  small.nickname.grey-text.text-darken-1
+    = link_to post.author_nickname, post.author, class: 'grey-text darken-5'
+  small.created_at.grey-text.text-darken-1
+    | ・#{time_ago_in_words(post.created_at)}
+  = post_kind_icon(post.kind)
+  p.blue-grey-text.text-darken-2
+    = post.description
+  .location
+    i.where.material-icons.grey-text.tiny location_on
+    small.at.grey-text.text-darken-1
+      = post.location
+  - if user_signed_in?
+    - if current_user == post.author
+      small.at.grey-text.text-darken-1
+      = link_to post, data: { confirm: t('alerts.are_you_sure') }, method: :delete, remote: true, class: 'remove secondary-content grey-text darken-5'
+        i.material-icons.grey-text clear
