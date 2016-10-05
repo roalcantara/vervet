@@ -1,5 +1,5 @@
 .fixed-action-btn style="bottom: 45px; right: 24px;"
-  a.btn-floating.btn-large.red
+  a.btn-floating.btn-large.red class="#{'auth0' unless user_signed_in?}"
     i.large.material-icons add_alert
   - if user_signed_in?
     ul

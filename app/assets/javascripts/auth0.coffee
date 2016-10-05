@@ -4,7 +4,7 @@ class Vervet.Auth0
   REDIRECT_TO = 'http://vervet.herokuapp.com/auth/callback'
 
   constructor: ->
-    @$auth = $('header .auth0')
+    @$auth = $('header .auth0, .posts .auth0')
     @initialize()
     @bind()
 
