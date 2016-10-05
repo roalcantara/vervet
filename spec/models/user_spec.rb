@@ -46,4 +46,11 @@ RSpec.describe User do
       expect(User.search(last.username)).to eq [last]
     end
   end
+
+  describe '#nickname' do
+    let(:user) { build :user }
+    it 'returns @ + username' do
+      expect(user.nickname).to eq "@#{user.username}"
+    end
+  end
 end

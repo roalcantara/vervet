@@ -26,4 +26,8 @@ class User < ApplicationRecord
       all
     end
   end
+
+  def nickname
+    "@#{username}"
+  end
 end
