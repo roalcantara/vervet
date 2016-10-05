@@ -8,6 +8,7 @@ RSpec.describe User do
     it { is_expected.to validate_presence_of :name }
     it { is_expected.to validate_uniqueness_of(:username).case_insensitive }
     it { is_expected.to validate_uniqueness_of(:email).case_insensitive }
+    it { is_expected.to have_many :posts }
 
     context 'when updating' do
       subject { create :user }
