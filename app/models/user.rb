@@ -4,6 +4,14 @@ class User < ApplicationRecord
 
   has_many :posts, -> { order(created_at: :desc) }, foreign_key: 'author_id', class_name: 'Post'
 
+  has_many :followings
+  has_many :followers, through: :followings
+
+  has_many :active_relationships, class_name: 'Following',
+                                  foreign_key: 'follower_id',
+                                  dependent: :destroy
+  has_many :following, through: :active_relationships, source: :user
+
   validates :provider, presence: true
   validates :uid, presence: true
   validates :name, presence: true
@@ -31,5 +39,17 @@ class User < ApplicationRecord
 
   def nickname
     "@#{username}"
+  end
+
+  def follow(user)
+    user.followings.create(follower: self)
+  end
+
+  def unfollow(user)
+    user.followers.destroy(self)
+  end
+
+  def follows?(user)
+    user.followers.include?(self)
   end
 end

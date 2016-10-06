@@ -15,6 +15,8 @@ pt-BR:
         name: Nome
         email: Email
         bio: Bio
+        followers: Seguidores
+        followings: Seguindo
       post:
         kind: Tipo
         description: Descrição
@@ -37,6 +39,9 @@ pt-BR:
     footer: Feito com ♥ por
   alerts:
     are_you_sure: Tem certeza?
+    followings:
+      start: Começou a seguir %{user}!
+      stop: Parou de seguir %{user}!
   helpers:
     submit:
       update_simple: Atualizar
@@ -49,3 +54,4 @@ pt-BR:
   account:
     profile_info_missing: Já está quase pronto. Por favor, atualize suas informações.
   search: Busca
+  all: Todos

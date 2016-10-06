@@ -17,7 +17,7 @@ header
                     i.material-icons search
                   i.material-icons.reset close
             li
-              = link_to [:edit, current_user], class: 'profile' do
+              = link_to [current_user], class: 'profile' do
                 i.material-icons account_circle
             li
               = link_to destroy_session_path, class: 'logout' do

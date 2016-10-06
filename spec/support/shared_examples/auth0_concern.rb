@@ -69,4 +69,22 @@ RSpec.shared_examples 'auth0_concern' do
       subject.logout
     end
   end
+
+  describe '#current_user?' do
+    let(:current_user) { create(:user) }
+    before { session[Auth0Concern::CURRENT_USER_KEY] = current_user.id }
+
+    context 'when the given user is the user signed in' do
+      it 'returns true' do
+        expect(subject.current_user?(current_user)).to be_truthy
+      end
+    end
+
+    context 'when the given user is the user signed in' do
+      let(:user) { create :user }
+      it 'returns false' do
+        expect(subject.current_user?(user)).to be_falsey
+      end
+    end
+  end
 end

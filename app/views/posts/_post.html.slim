@@ -13,8 +13,7 @@ li.collection-item.avatar id="post_#{post.id}" data-id="#{post.id}"
     i.where.material-icons.grey-text.tiny location_on
     small.at.grey-text.text-darken-1
       = post.location
-  - if user_signed_in?
-    - if current_user == post.author
-      small.at.grey-text.text-darken-1
-      = link_to post, data: { confirm: t('alerts.are_you_sure') }, method: :delete, remote: true, class: 'remove secondary-content grey-text darken-5'
-        i.material-icons.grey-text clear
+  - if current_user?(post.author)
+    small.at.grey-text.text-darken-1
+    = link_to post, data: { confirm: t('alerts.are_you_sure') }, method: :delete, remote: true, class: 'remove secondary-content grey-text darken-5'
+      i.material-icons.grey-text clear

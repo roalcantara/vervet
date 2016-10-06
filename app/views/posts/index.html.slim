@@ -2,6 +2,16 @@
 
 .row.pad-top-30
   .col.s8.offset-s2
+    - if user_signed_in?
+      ul.tabs
+        li.tab.col.s3
+          a.active href="#all" = t('all')
+        li.tab.col.s3
+          a href="#followings" = User.human_attribute_name(:followings)
+  #all.col.s8.offset-s2
     = render '/posts/posts', posts: @posts
+  - if user_signed_in?
+    #followings.col.s8.offset-s2
+      = render '/posts/posts', posts: @following_posts
 
 = render '/posts/fab_add'

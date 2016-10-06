@@ -18,6 +18,10 @@ module Auth0Concern
       User.find(session[CURRENT_USER_KEY]) if user_signed_in?
     end
 
+    def current_user?(user)
+      session[CURRENT_USER_KEY] == user.id if user_signed_in?
+    end
+
     def logout
       reset_session
     end

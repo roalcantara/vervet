@@ -15,6 +15,8 @@ en:
         name: Name
         email: Email
         bio: Bio
+        followers: Followers
+        followings: Followings
       post:
         kind: Type
         description: Description
@@ -37,6 +39,9 @@ en:
     footer: Made with ♥ by
   alerts:
     are_you_sure: Are you sure?
+    followings:
+      start: Started following %{user}!
+      stop: Stopped following %{user}!
   helpers:
     submit:
       update_simple: Update
@@ -49,3 +54,4 @@ en:
   account:
     profile_info_missing: It's almost done. Please, update your data.
   search: Search
+  all: All

@@ -1,10 +1,25 @@
 - main_title t('pages.profile')
 .row.pad-top-30
   .col.s4
-    = render @user
-    - if user_signed_in?
-      - if current_user.id == @user.id
-        = link_to [:edit, @user], class: 'btn light-blue accent-3 waves-effect waves-light width-100-percent'
-          i.material-icons mode_edit
+    .row
+      .col.s12
+        = render @user
+        - if user_signed_in?
+          - if current_user.id == @user.id
+            = link_to [:edit, @user], class: 'btn light-blue accent-3 waves-effect waves-light width-100-percent'
+              i.material-icons mode_edit
+          - else
+            - if current_user.follows?(@user)
+              = render '/users/unfollow_button'
+            - else
+              = render '/users/follow_button'
+      - if @user.followers.any?
+        .col.s12
+          h6.white-text = User.human_attribute_name(:followers)
+          = render @user.followers
+      - if @user.following.any?
+        .col.s12
+          h6.white-text = User.human_attribute_name(:followings)
+          = render @user.following
   .col.s8
     = render '/posts/posts', posts: @user.posts
