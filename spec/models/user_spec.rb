@@ -54,4 +54,45 @@ RSpec.describe User do
       expect(user.nickname).to eq "@#{user.username}"
     end
   end
+
+  describe '#follow' do
+    let(:user) { create :user }
+    let(:other) { create :user }
+    before { user.follow(other) }
+
+    it 'start following the given user' do
+      expect(other.followers).to include(user)
+    end
+  end
+
+  describe '#unfollow' do
+    let(:user) { create :user }
+    let(:other) { create :user }
+    before do
+      user.follow(other)
+      user.unfollow(other)
+    end
+
+    it 'stop following the given user' do
+      expect(other.followers).to_not include(user)
+    end
+  end
+
+  describe '#follows?' do
+    let(:user) { create :user }
+    let(:other) { create :user }
+
+    context 'when the it does not follow the given user' do
+      it 'returns false' do
+        expect(user.follows?(other)).to be_falsey
+      end
+    end
+
+    context 'when the it follows the given user' do
+      before { user.follow(other) }
+      it 'returns true' do
+        expect(user.follows?(other)).to be_truthy
+      end
+    end
+  end
 end

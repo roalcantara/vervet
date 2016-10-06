@@ -8,4 +8,9 @@ Rails.application.routes.draw do
   end
   resources :posts, only: [:index, :create, :destroy]
   get '/posts/new/:kind', to: 'posts#new', as: :new_post
+
+  scope '/users' do
+    get '/follow/:id', to: 'following#follow', as: :follow
+    get '/unfollow/:id', to: 'following#unfollow', as: :unfollow
+  end
 end
