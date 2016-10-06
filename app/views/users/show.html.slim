@@ -13,8 +13,13 @@
               = render '/users/unfollow_button'
             - else
               = render '/users/follow_button'
-      .col.s12
-        h6.white-text = User.human_attribute_name(:followers)
-        = render @user.followers
+      - if @user.followers.any?
+        .col.s12
+          h6.white-text = User.human_attribute_name(:followers)
+          = render @user.followers
+      - if @user.following.any?
+        .col.s12
+          h6.white-text = User.human_attribute_name(:followings)
+          = render @user.following
   .col.s8
     = render '/posts/posts', posts: @user.posts

@@ -9,4 +9,7 @@ class Post < ApplicationRecord
 
   delegate :name, to: :author, prefix: true
   delegate :nickname, to: :author, prefix: true
+
+  scope :recent, -> { limit(100).order(created_at: :desc) }
+  scope :posted_by, ->(authors) { where(author_id: authors).order(created_at: :desc).limit(100) }
 end

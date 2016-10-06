@@ -7,6 +7,11 @@ class User < ApplicationRecord
   has_many :followings
   has_many :followers, through: :followings
 
+  has_many :active_relationships, class_name: 'Following',
+                                  foreign_key: 'follower_id',
+                                  dependent: :destroy
+  has_many :following, through: :active_relationships, source: :user
+
   validates :provider, presence: true
   validates :uid, presence: true
   validates :name, presence: true

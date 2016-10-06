@@ -4,7 +4,8 @@ class PostsController < ApplicationController
   respond_to :html
 
   def index
-    @posts = Post.all.order(created_at: :desc)
+    @posts = Post.includes(:author).recent
+    @following_posts = Post.includes(:author).posted_by(current_user.following.map(&:id)) if user_signed_in?
     respond_with(@posts)
   end
 
