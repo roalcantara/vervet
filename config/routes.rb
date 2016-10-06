@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  root 'posts#index'
   resources :users, except: :new
   scope '/auth' do
     get '/callback', to: 'auth0#callback', as: :callback_auth0
