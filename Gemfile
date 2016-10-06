@@ -24,6 +24,7 @@ gem 'responders',             '~> 2.2'
 gem 'omniauth',               '~> 1.3.1'
 gem 'omniauth-auth0',         '~> 1.4.1'
 gem 'i18n-js',                '~> 3.0.0.rc14'
+gem 'sendgrid-ruby',          '~> 4.0'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-auth0-lock',  '~> 10.4.0'

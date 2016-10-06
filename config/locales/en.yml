@@ -55,3 +55,11 @@ en:
     profile_info_missing: It's almost done. Please, update your data.
   search: Search
   all: All
+  user_mailer:
+    new_follower:
+      subject: You have a new follower on Vervet
+      greetings: Hi %{name},
+      content: |
+        %{name} is now following you!
+        See your profile at: %{url}
+      footer: Vervet Team

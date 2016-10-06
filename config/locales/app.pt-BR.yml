@@ -55,3 +55,11 @@ pt-BR:
     profile_info_missing: Já está quase pronto. Por favor, atualize suas informações.
   search: Busca
   all: Todos
+  user_mailer:
+    new_follower:
+      subject: Você tem um novo seguidor no Vervet
+      greetings: Olá %{name},
+      content: |
+        %{name} está te seguindo!
+        Acesse sua página em: %{url}
+      footer: Equipe Vervet
