@@ -1,7 +1,7 @@
 require 'ffaker'
 
 FactoryGirl.define do
-  factory :user do
+  factory :user, aliases: [:author] do
     provider { [:twitter, :facebook].sample }
     sequence :uid do |n|
       "#{FFaker::Guid.guid}_#{n}"

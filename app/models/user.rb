@@ -2,6 +2,8 @@ class User < ApplicationRecord
   VALID_USERNAME_REGEX = /\A(\w|\.)+\z/
   VALID_EMAIL_REGEX = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
 
+  has_many :posts, -> { order(created_at: :desc) }, foreign_key: 'author_id', class_name: 'Post'
+
   validates :provider, presence: true
   validates :uid, presence: true
   validates :name, presence: true
@@ -25,5 +27,9 @@ class User < ApplicationRecord
     else
       all
     end
+  end
+
+  def nickname
+    "@#{username}"
   end
 end

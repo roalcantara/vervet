@@ -1,0 +1,17 @@
+= simple_form_for(@post, remote: true) do |f|
+  = f.hidden_field :author
+  .fixed-action-btn.horizontal.kind
+    = f.hidden_field :kind
+    a.btn-floating.btn-large.btn-flat.waves-effect.waves-light
+      i.material-icons.black-text more_vert
+    = fabs_post_kinds
+  .input-field.description
+    = post_prefix_icon @post.kind
+    = f.text_area :description, class: "materialize-textarea #{errors?(f.object, :description, "invalid")}"
+    = f.label :description, t("activemodel.attributes.post.description_question")
+    = f.error :description
+  .input-field.location
+    i.material-icons.prefix add_location
+    = f.text_field :location, class: "validate #{errors?(f.object, :description, "invalid")}"
+    = f.label :location, t("activemodel.attributes.post.location_question")
+    = f.error :location

@@ -26,7 +26,7 @@ class UsersController < ApplicationController
   private
 
   def set_user
-    @user = User.find(params[:id])
+    @user = User.includes(posts: :author).find(params[:id])
   end
 
   def user_params

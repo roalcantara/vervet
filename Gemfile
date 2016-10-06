@@ -5,7 +5,6 @@ gem 'rails',                  '5.0.0'
 gem 'puma',                   '2.15.3'
 gem 'secure_headers',         '2.4.4'
 gem 'jquery-rails',           '4.1.1'
-gem 'turbolinks',             '2.5.3'
 gem 'jbuilder',               '2.5.0'
 gem 'slim-rails',             '3.1.0'
 gem 'pg',                     '0.18.4'
@@ -24,6 +23,7 @@ gem 'materialize-sass',       '~> 0.97.7'
 gem 'responders',             '~> 2.2'
 gem 'omniauth',               '~> 1.3.1'
 gem 'omniauth-auth0',         '~> 1.4.1'
+gem 'i18n-js',                '~> 3.0.0.rc14'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-auth0-lock',  '~> 10.4.0'
@@ -66,12 +66,12 @@ group :test do
 end
 
 group :development, :test do
-  gem 'rspec-rails',           '3.5.1'
-  gem 'factory_girl_rails',    '4.5.0'
-  gem 'pry-rails',             '0.3.4'
-  gem 'dotenv-rails',          '2.1.1'
-  gem 'awesome_print',         '1.6.1'
-  gem 'spring-commands-rspec', '1.0.4'
-  gem 'byebug',                '8.2.1'
-  gem 'spring',                '1.5.0'
+  gem 'rspec-rails',           '~> 3.5.1'
+  gem 'pry-rails',             '~> 0.3.4'
+  gem 'dotenv-rails',          '~> 2.1.1'
+  gem 'awesome_print',         '~> 1.6.1'
+  gem 'spring-commands-rspec', '~> 1.0.4'
+  gem 'byebug',                '~> 8.2.1'
+  gem 'spring',                '~> 1.5.0'
+  gem 'factory_girl_rails',    '~> 4.7'
 end
