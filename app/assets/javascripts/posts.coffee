@@ -30,6 +30,10 @@ class Vervet.Post
     @$timeline.prepend(xhr.responseText)
       .find('li').first().hide().fadeIn 'slow'
     @$modal.closeModal()
+    resource_name = I18n.t('activemodel.models.post.one')
+    args = {resource_name: resource_name}
+    message = I18n.t('flash.actions.create.notice', args)
+    Materialize.toast(message, 2000, 'green accent-4')
 
   save_error: (e, xhr, status, error) =>
     @$modal.find('.modal-content')
